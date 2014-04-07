@@ -36,21 +36,17 @@ public class Customer extends BasePersistable {
 	@Column(name = "lastname", nullable = false, length = 255)
 	private String lastname;
 	
-	@Column(name = "birthdate")
-	private GregorianCalendar birthdate;
-	
 	@Column(name = "address", length = 255)
 	private String address;
 		
 	protected Customer()
 	{}
 	
-	public Customer(String firstname, String lastname, GregorianCalendar birthdate, String address)
+	public Customer(String firstname, String lastname, String address)
 	{
 		Ensure.notEmpty("lastname", lastname);
 		this.firstname=firstname;
 		this.lastname=lastname;
-		this.birthdate=birthdate;
 		this.address=address;
 		this.weddings = new ArrayList<>();
 	}

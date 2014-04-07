@@ -24,8 +24,6 @@ public class QCustomer extends EntityPathBase<Customer> {
 
     public final StringPath address = createString("address");
 
-    public final ComparablePath<java.util.GregorianCalendar> birthdate = createComparable("birthdate", java.util.GregorianCalendar.class);
-
     public final NumberPath<Integer> customerid = createNumber("customerid", Integer.class);
 
     public final StringPath firstname = createString("firstname");

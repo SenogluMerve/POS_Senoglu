@@ -1,4 +1,4 @@
-package weddings.service;
+package weddings.service.jpa;
 
 
 import java.util.GregorianCalendar;
@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 import weddings.domain.Customer;
 
 @Service
-public class CustomerService {
+public class CustomerServiceJpa {
 	
 	protected EntityManager em;
 	
-	public Customer createNewCustomer(String firstname, String lastname, String address) {
-		Customer cu = new Customer(firstname, lastname, address);
+	public Customer createNewCustomer(String firstname, String lastname, GregorianCalendar birthdate, String address) {
+		Customer cu = new Customer(firstname, lastname, birthdate, address);
 //		cu.setVorname(firstname);
 //		cu.setNachname(lastname);
 //		cu.setGeburtsdatum(birthdate);
